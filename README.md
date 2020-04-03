@@ -1,5 +1,5 @@
 <h1 align="center">
-<img alt="" title="" src="https://image.winudf.com/v2/image1/bWluZHdhcmUubWluZWdhbWVzX2ljb25fMTU1NDYyMjYwOV8wNzg/icon.png?w=170&fakeurl=1" width="80" />
+<img alt="" title="" src="https://image.winudf.com/v2/image1/bWluZHdhcmUubWluZWdhbWVzX2ljb25fMTU1NDYyMjYwOV8wNzg/icon.png?w=170&fakeurl=1" width="80" /><br>
 Campo minado
   <!-- trocar: 'você pode colocar uma imagem (logo) que represente seu projeto (visualmente) -->
 </h1>
