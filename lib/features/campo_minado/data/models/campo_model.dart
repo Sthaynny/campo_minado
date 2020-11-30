@@ -1,20 +1,13 @@
-import 'package:flutter/foundation.dart';
+import 'package:campo_minado/core/exceptions/explosao_exceptin.dart';
 
-import 'explosao_exceptin.dart';
+import '../../../../models/campo.dart';
 
-class Campo {
-  final int linha;
-  final int coluna;
-  final List<Campo> vizinhos = [];
+class CampoModel extends Campo {
+  final List<CampoModel> vizinhos = [];
   bool _aberto = false;
   bool _marcado = false;
   bool _minado = false;
   bool _explodido = false;
-
-  Campo({
-    @required this.linha,
-    @required this.coluna,
-  });
 
   void adicionarVizinho(Campo vizinho) {
     final deltaLinha = (linha - vizinho.linha).abs();
