@@ -1,9 +1,9 @@
-import 'package:campo_minado/models/tabuleiro.dart';
+import 'package:campo_minado/features/campo_minado/data/models/tabuleiro_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 main() {
   test("Ganhar jogo", () {
-    Tabuleiro tab = Tabuleiro(
+    TabuleiroModel tab = TabuleiroModel(
       linhas: 2,
       colunas: 2,
       qtddeBombas: 0,

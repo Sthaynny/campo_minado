@@ -1,11 +1,10 @@
+import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
 import 'package:flutter/material.dart';
 
-import 'package:campo_minado/models/campo.dart';
-
 class CampoWidget extends StatelessWidget {
-  final Campo campo;
-  final void Function(Campo) onAbrir;
-  final void Function(Campo) onAlterarMarcacao;
+  final CampoModel campo;
+  final void Function(CampoModel) onAbrir;
+  final void Function(CampoModel) onAlterarMarcacao;
 
   const CampoWidget({
     Key key,

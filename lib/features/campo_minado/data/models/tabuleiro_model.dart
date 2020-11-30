@@ -1,12 +1,11 @@
 import 'dart:math';
 
-import 'package:campo_minado/models/campo.dart';
+import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
+import 'package:campo_minado/features/campo_minado/domain/entities/tabuleiro.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../../../models/tabuleiro.dart';
-
 class TabuleiroModel extends Tabuleiro {
-  final List<Campo> _campos = [];
+  final List<CampoModel> _campos = [];
 
   TabuleiroModel({
     @required int linhas,
@@ -30,7 +29,7 @@ class TabuleiroModel extends Tabuleiro {
   void _criarCampos() {
     for (int l = 0; l < linhas; l++) {
       for (int c = 0; c < colunas; c++) {
-        _campos.add(Campo(linha: l, coluna: c));
+        _campos.add(CampoModel(linha: l, coluna: c));
       }
     }
   }
@@ -56,7 +55,7 @@ class TabuleiroModel extends Tabuleiro {
     }
   }
 
-  List<Campo> get campos {
+  List<CampoModel> get campos {
     return _campos;
   }
 

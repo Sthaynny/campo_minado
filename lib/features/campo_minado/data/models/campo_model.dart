@@ -1,8 +1,13 @@
 import 'package:campo_minado/core/exceptions/explosao_exceptin.dart';
-
-import '../../../../models/campo.dart';
+import 'package:campo_minado/features/campo_minado/domain/entities/campo.dart';
+import 'package:meta/meta.dart';
 
 class CampoModel extends Campo {
+  CampoModel({
+    @required int linha,
+    @required int coluna,
+  }) : super(coluna: coluna, linha: linha);
+
   final List<CampoModel> vizinhos = [];
   bool _aberto = false;
   bool _marcado = false;
