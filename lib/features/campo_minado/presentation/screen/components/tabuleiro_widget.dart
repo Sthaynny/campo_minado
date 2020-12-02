@@ -1,13 +1,12 @@
-import 'package:campo_minado/components/campo_widget.dart';
+import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
+import 'package:campo_minado/features/campo_minado/data/models/tabuleiro_model.dart';
+import 'package:campo_minado/features/campo_minado/presentation/screen/components/campo_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'package:campo_minado/models/campo.dart';
-import 'package:campo_minado/models/tabuleiro.dart';
-
 class TabuleiroWidget extends StatelessWidget {
-  final Tabuleiro tabuleiro;
-  final void Function(Campo) onAbrir;
-  final void Function(Campo) onAlterarMarcacao;
+  final TabuleiroModel tabuleiro;
+  final void Function(CampoModel) onAbrir;
+  final void Function(CampoModel) onAlterarMarcacao;
   const TabuleiroWidget({
     Key key,
     this.tabuleiro,
