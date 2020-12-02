@@ -44,7 +44,11 @@ Tecnologias ultilizadas no projeto:
 
 - [Flutter](https://flutter.dev/)
 - [Dart](https://pub.dev/)
+- [Flutter bloc](https://pub.dev/packages/flutter_bloc)
+- [Bloc](https://pub.dev/packages/bloc)
+- [GetIt](https://pub.dev/packages/get_it)
 - [Github](https://github.com)
+- [GitFlow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow)
 - [Emoji](https://gist.github.com/rxaviers/7360908)
 
 ## 💻 Projeto
