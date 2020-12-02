@@ -1,10 +1,10 @@
-import 'package:campo_minado/models/campo.dart';
+import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 main() {
-  group('Campo', () {
-    test("Abrir Campo COM Explosão", () {
-      Campo c = Campo(
+  group('CampoModel', () {
+    test("Abrir CampoModel COM Explosão", () {
+      CampoModel c = CampoModel(
         linha: 0,
         coluna: 0,
       );
@@ -13,8 +13,8 @@ main() {
       expect(c.abrir, throwsException);
     });
 
-    test("Abrir Campo Sem Explosão", () {
-      Campo c = Campo(
+    test("Abrir CampoModel Sem Explosão", () {
+      CampoModel c = CampoModel(
         linha: 0,
         coluna: 0,
       );
@@ -24,28 +24,28 @@ main() {
     });
 
     test("Adicionar NÃO vizinho", () {
-      Campo c1 = Campo(linha: 0, coluna: 0);
-      Campo c2 = Campo(linha: 1, coluna: 3);
+      CampoModel c1 = CampoModel(linha: 0, coluna: 0);
+      CampoModel c2 = CampoModel(linha: 1, coluna: 3);
       c1.adicionarVizinho(c2);
       expect(c1.vizinhos.isEmpty, isTrue);
     });
 
     test("Adicionar vizinho", () {
-      Campo c1 = Campo(linha: 3, coluna: 3);
-      Campo c2 = Campo(linha: 3, coluna: 4);
-      Campo c3 = Campo(linha: 2, coluna: 2);
-      Campo c4 = Campo(linha: 4, coluna: 4);
+      CampoModel c1 = CampoModel(linha: 3, coluna: 3);
+      CampoModel c2 = CampoModel(linha: 3, coluna: 4);
+      CampoModel c3 = CampoModel(linha: 2, coluna: 2);
+      CampoModel c4 = CampoModel(linha: 4, coluna: 4);
       c1.adicionarVizinho(c2);
       c1.adicionarVizinho(c3);
       c1.adicionarVizinho(c4);
       expect(c1.vizinhos.length, 3);
     });
     test("minas na vizinhaca", () {
-      Campo c1 = Campo(linha: 3, coluna: 3);
-      Campo c2 = Campo(linha: 3, coluna: 4);
+      CampoModel c1 = CampoModel(linha: 3, coluna: 3);
+      CampoModel c2 = CampoModel(linha: 3, coluna: 4);
       c2.minar();
-      Campo c3 = Campo(linha: 2, coluna: 2);
-      Campo c4 = Campo(linha: 4, coluna: 4);
+      CampoModel c3 = CampoModel(linha: 2, coluna: 2);
+      CampoModel c4 = CampoModel(linha: 4, coluna: 4);
       c4.minar();
       c1.adicionarVizinho(c2);
       c1.adicionarVizinho(c3);

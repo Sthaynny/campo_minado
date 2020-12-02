@@ -1,20 +1,17 @@
 import 'dart:math';
 
-import 'package:campo_minado/models/campo.dart';
+import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
+import 'package:campo_minado/features/campo_minado/domain/entities/tabuleiro.dart';
 import 'package:flutter/foundation.dart';
 
-class Tabuleiro {
-  final int linhas;
-  final int colunas;
-  final int qtddeBombas;
+class TabuleiroModel extends Tabuleiro {
+  final List<CampoModel> _campos = [];
 
-  final List<Campo> _campos = [];
-
-  Tabuleiro({
-    @required this.linhas,
-    @required this.colunas,
-    @required this.qtddeBombas,
-  }) {
+  TabuleiroModel({
+    @required int linhas,
+    @required int colunas,
+    @required int qtddeBombas,
+  }) : super(linhas: linhas, colunas: colunas, qtddeBombas: qtddeBombas) {
     _criarCampos();
     _relacionarVizinhos();
     _sortearMinas();
@@ -32,7 +29,7 @@ class Tabuleiro {
   void _criarCampos() {
     for (int l = 0; l < linhas; l++) {
       for (int c = 0; c < colunas; c++) {
-        _campos.add(Campo(linha: l, coluna: c));
+        _campos.add(CampoModel(linha: l, coluna: c));
       }
     }
   }
@@ -58,7 +55,7 @@ class Tabuleiro {
     }
   }
 
-  List<Campo> get campos {
+  List<CampoModel> get campos {
     return _campos;
   }
 
