@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:campo_minado/core/exceptions/explosao_exceptin.dart';
 import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
 import 'package:campo_minado/features/campo_minado/data/models/tabuleiro_model.dart';
-import 'package:meta/meta.dart';
 
 part 'campo_minado_state.dart';
 
@@ -17,12 +16,12 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
     if (state.venceu == null) {
       try {
         campo.abrir();
-        if (state.tabuleiro.resolvido) {
+        if (state.tabuleiro != null && state.tabuleiro!.resolvido) {
           emit(CampoMinadoFinishVictory(
               venceu: true, tabuleiro: state.tabuleiro));
         }
       } on ExplosaoException {
-        state.tabuleiro.revelarBombas();
+        state.tabuleiro?.revelarBombas();
         emit(CampoMinadoFinishVictory(
             venceu: false, tabuleiro: state.tabuleiro));
       }
@@ -30,7 +29,7 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
   }
 
   void reiniciar() {
-    state.tabuleiro.reiniciar();
+    state.tabuleiro?.reiniciar();
     emit(CampoMinadoRestart(venceu: null, tabuleiro: state.tabuleiro));
   }
 
@@ -38,7 +37,7 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
     if (state.venceu == null) {
       campo.alterarMarcacao();
 
-      if (state.tabuleiro.resolvido) {
+      if (state.tabuleiro != null && state.tabuleiro!.resolvido) {
         emit(CampoMinadoFinishVictory(
             venceu: false, tabuleiro: state.tabuleiro));
       }
@@ -46,7 +45,15 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
   }
 
   TabuleiroModel getTabuleiro(double largura, double altura) {
-    if (state.tabuleiro == null) {
+    if (state.tabuleiro != null) {
+      if (state.venceu == null) {
+        emit(CampoMinadoCarregado(
+          venceu: state.venceu,
+          tabuleiro: state.tabuleiro,
+        ));
+      }
+      return state.tabuleiro!;
+    } else {
       int qtdColunas = 15;
       double tamanhoCampo = largura / qtdColunas;
       int qtdLinhas = (altura / tamanhoCampo).floor();
@@ -55,14 +62,10 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
         colunas: qtdColunas,
         qtddeBombas: 10,
       );
-      if (state.venceu == null)
+      if (state.venceu == null) {
         emit(CampoMinadoCarregado(venceu: state.venceu, tabuleiro: tab));
+      }
       return tab;
-    } else {
-      if (state.venceu == null)
-        emit(CampoMinadoCarregado(
-            venceu: state.venceu, tabuleiro: state.tabuleiro));
-      return state.tabuleiro;
     }
   }
 }
