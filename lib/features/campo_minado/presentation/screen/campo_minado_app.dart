@@ -1,6 +1,3 @@
-import 'package:campo_minado/core/exceptions/explosao_exceptin.dart';
-import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
-import 'package:campo_minado/features/campo_minado/data/models/tabuleiro_model.dart';
 import 'package:campo_minado/features/campo_minado/presentation/cubit/campo_minado_cubit.dart';
 import 'package:campo_minado/features/campo_minado/presentation/screen/components/resultado.dart';
 import 'package:campo_minado/features/campo_minado/presentation/screen/components/tabuleiro_widget.dart';
