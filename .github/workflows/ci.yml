@@ -33,3 +33,6 @@ jobs:
 
       - name: Run tests
         run: flutter test
+        
+      - name: Commit lint messege
+      - uses: wagoid/commitlint-github-action@v4
