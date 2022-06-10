@@ -43,9 +43,10 @@ Pode-se dizer que a lógica do campo minado é uma questão de perspectiva basea
 
 # :camera: Screenshots
 <div align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
-   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
+   <img src="https://user-images.githubusercontent.com/66264766/173155322-f3c7329a-06fd-4493-b894-e4bcb6bf4636.png" width="230"/>
+   <img src="https://user-images.githubusercontent.com/66264766/173155332-5db7c929-cc85-4a7b-a602-77b786f0ffa2.png" width="230"/>
+   <img src="https://user-images.githubusercontent.com/66264766/173155335-352384a2-1c30-43b0-a845-dbdb8a965994.png" width="230"/>
+   <img src="https://user-images.githubusercontent.com/66264766/173155345-27be3e00-c82f-4f1e-9133-85494ca01da9.png" width="230"/>
 
 </div>
 
