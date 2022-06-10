@@ -20,7 +20,10 @@ class TabuleiroWidget extends StatelessWidget {
       crossAxisCount: tabuleiro.colunas,
       children: tabuleiro.campos.map((c) {
         return CampoWidget(
-            campo: c, onAbrir: onAbrir, onAlterarMarcacao: onAlterarMarcacao);
+          campo: c,
+          onAbrir: onAbrir,
+          onAlterarMarcacao: onAlterarMarcacao,
+        );
       }).toList(),
     );
   }
