@@ -8,22 +8,20 @@ class TabuleiroWidget extends StatelessWidget {
   final void Function(CampoModel) onAbrir;
   final void Function(CampoModel) onAlterarMarcacao;
   const TabuleiroWidget({
-    Key key,
-    this.tabuleiro,
-    this.onAbrir,
-    this.onAlterarMarcacao,
+    Key? key,
+    required this.tabuleiro,
+    required this.onAbrir,
+    required this.onAlterarMarcacao,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: GridView.count(
-        crossAxisCount: tabuleiro.colunas,
-        children: tabuleiro.campos.map((c) {
-          return CampoWidget(
-              campo: c, onAbrir: onAbrir, onAlterarMarcacao: onAlterarMarcacao);
-        }).toList(),
-      ),
+    return GridView.count(
+      crossAxisCount: tabuleiro.colunas,
+      children: tabuleiro.campos.map((c) {
+        return CampoWidget(
+            campo: c, onAbrir: onAbrir, onAlterarMarcacao: onAlterarMarcacao);
+      }).toList(),
     );
   }
 }

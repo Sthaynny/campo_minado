@@ -7,24 +7,25 @@ class CampoWidget extends StatelessWidget {
   final void Function(CampoModel) onAlterarMarcacao;
 
   const CampoWidget({
-    Key key,
-    @required this.campo,
-    @required this.onAbrir,
-    @required this.onAlterarMarcacao,
+    Key? key,
+    required this.campo,
+    required this.onAbrir,
+    required this.onAlterarMarcacao,
   }) : super(key: key);
 
   Widget _getImage() {
     int qtdMinas = campo.qtdeMinasNaVizinhaca;
-    if (campo.aberto && campo.minado && campo.explodido)
+    if (campo.aberto && campo.minado && campo.explodido) {
       return Image.asset('assets/images/bomba_0.jpeg');
-    else if (campo.aberto && campo.minado)
+    } else if (campo.aberto && campo.minado) {
       return Image.asset('assets/images/bomba_1.jpeg');
-    else if (campo.aberto)
+    } else if (campo.aberto) {
       return Image.asset('assets/images/aberto_$qtdMinas.jpeg');
-    else if (campo.marcado)
+    } else if (campo.marcado) {
       return Image.asset('assets/images/bandeira.jpeg');
-    else
+    } else {
       return Image.asset('assets/images/fechado.jpeg');
+    }
   }
 
   @override

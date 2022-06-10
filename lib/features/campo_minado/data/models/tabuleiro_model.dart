@@ -2,15 +2,14 @@ import 'dart:math';
 
 import 'package:campo_minado/features/campo_minado/data/models/campo_model.dart';
 import 'package:campo_minado/features/campo_minado/domain/entities/tabuleiro.dart';
-import 'package:flutter/foundation.dart';
 
 class TabuleiroModel extends Tabuleiro {
   final List<CampoModel> _campos = [];
 
   TabuleiroModel({
-    @required int linhas,
-    @required int colunas,
-    @required int qtddeBombas,
+    required int linhas,
+    required int colunas,
+    required int qtddeBombas,
   }) : super(linhas: linhas, colunas: colunas, qtddeBombas: qtddeBombas) {
     _criarCampos();
     _relacionarVizinhos();
@@ -18,11 +17,13 @@ class TabuleiroModel extends Tabuleiro {
   }
 
   void reiniciar() {
+    // ignore: avoid_function_literals_in_foreach_calls
     _campos.forEach((c) => c.reiniciar());
     _sortearMinas();
   }
 
   void revelarBombas() {
+    // ignore: avoid_function_literals_in_foreach_calls
     _campos.forEach((c) => c.revelarBomba());
   }
 

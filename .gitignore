@@ -87,6 +87,12 @@ gen-external-apklibs
 *.ipr
 *~
 *.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
 
 # Android Patch
 
@@ -420,6 +426,7 @@ node_modules
 
 # Flutter/Dart/Pub related
 **/doc/api/
+**/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
 .packages
@@ -446,19 +453,13 @@ unlinked_spec.ds
 /packages/flutter/coverage/
 version
 
-# Miscellaneous
-*.class
-#*.lock
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
+# Symbolication related
+app.*.symbols
 
+# Obfuscation related
+app.*.map.json
 
-# Symbols
-ios_dart_symbols.json
-android_dart_symbols.json
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release

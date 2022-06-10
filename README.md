@@ -1,46 +1,56 @@
-<h1 align="center">
-<img alt="" title="" src="https://image.winudf.com/v2/image1/bWluZHdhcmUubWluZWdhbWVzX2ljb25fMTU1NDYyMjYwOV8wNzg/icon.png?w=170&fakeurl=1" width="80" /><br>
-Campo minado
-  <!-- trocar: 'você pode colocar uma imagem (logo) que represente seu projeto (visualmente) -->
-</h1>
+<p align="center">
+   <img src="https://image.winudf.com/v2/image1/bWluZHdhcmUubWluZWdhbWVzX2ljb25fMTU1NDYyMjYwOV8wNzg/icon.png?w=170&fakeurl=1" alt="dt money" width="200"/>
+</p>
 
-<h2 align="center">Jogo para diversão</h2>
+<h1 align="center">Campo Minado</h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Sthaynny/campo_minado">
-  <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Sthaynny/campo_minado">
-  <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
-
-  <a href="https://github.com/Sthaynny/campo_minado/commits/master">
-  <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Sthaynny/campo_minado">
-     <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
+   <a href="https://www.linkedin.com/in/igor-sthaynny/">
+      <img alt="Igor Sthaynny" src="https://img.shields.io/badge/-Sthaynny-5965e0?style=flat&logo=Linkedin&logoColor=white"/>
+   </a>
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/Sthaynny/campo_minado?color=%235963C5" />
+  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/Sthaynny/campo_minado?color=%235761C3" />
+  <img alt="License" src="https://img.shields.io/github/license/Sthaynny/campo_minado?color=%235E69D7" />
+  <img alt="Issues" src="https://img.shields.io/github/issues/Sthaynny/campo_minado?color=%235965E0">
+  <a href="mailto:igorsthaynny@gmail.com">
+   <img alt="E-mail" src="https://img.shields.io/badge/-igorsthaynny%40gmail.com-%23525DCB" />
   </a>
-
-  <a href="https://github.com/Sthaynny/campo_minado">
-   <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Sthaynny/campo_minado" width="50px">
-     <!-- trocar: 'rlocatelli9/template-README' pelo caminho do seu respositório -->
-
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
 <p align="center">
-  <a href="#bookmark_tabs-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+Projeto para treinamento da linguagem de programação e desenvolvimento mobile.
+Campo minado é um popular jogo de computador para um jogador. Foi inventado por Phil Spencer em 1989 e tem como objectivo revelar um campo de minas sem que alguma seja detonada.
+Pode-se dizer que a lógica do campo minado é uma questão de perspectiva baseada na forma de um quadrado 3x3. O quadradinho central (em vermelho) está cercado por outros 8 (oito) quadradinhos, formando assim o quadrado 3x3. Quando um quadradinho é revelado, podemos encontrar um campo vazio, um número ou uma bomba.
 </p>
 
-<br>
+<hr />
 
-## :bookmark_tabs: Tecnologias
+<div align="center">
+  <sub> Made with 💖 by
+    <a href="https://github.com/Sthaynny">Igor Sthaynny
+  </sub>
+</div>
 
-Tecnologias ultilizadas no projeto:
+# 📌 Contents
+
+- [📌 Contents](#-contents)
+- [:camera: Screenshots](#camera-screenshots)
+- [:rocket: Tecnologias](#rocket-tecnologias)
+- [:computer: Como rodar](#computer-como-rodar)
+- [:bug: Issues](#bug-issues)
+- [:sparkles: Contribuição](#sparkles-contribuição)
+- [:page_facing_up: Licença](#page_facing_up-licença)
+
+# :camera: Screenshots
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
+   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
+   <img src="https://user-images.githubusercontent.com/46109133/155231022-7d54b0eb-a0c5-4e60-a244-3e5c30fc9373.jpeg" width="230"/>
+
+</div>
+
+
+# :rocket: Tecnologias
 
 - [Flutter](https://flutter.dev/)
 - [Dart](https://pub.dev/)
@@ -51,21 +61,45 @@ Tecnologias ultilizadas no projeto:
 - [GitFlow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow)
 - [Emoji](https://gist.github.com/rxaviers/7360908)
 
-## 💻 Projeto
+# :computer: Como rodar
 
-Projeto para treinamento da linguagem de programação e desenvolvimento mobile.
-Campo minado é um popular jogo de computador para um jogador. Foi inventado por Phil Spencer em 1989 e tem como objectivo revelar um campo de minas sem que alguma seja detonada.
-Pode-se dizer que a lógica do campo minado é uma questão de perspectiva baseada na forma de um quadrado 3x3. O quadradinho central (em vermelho) está cercado por outros 8 (oito) quadradinhos, formando assim o quadrado 3x3. Quando um quadradinho é revelado, podemos encontrar um campo vazio, um número ou uma bomba.
+```bash
+# Clone Repositorio
+$ git clone https://github.com/Sthaynny/campo_minado.git
 
-## 🤔 Como contribuir
+# Instale as dependências
+$ flutter pub get
 
-- Faça um fork desse repositório;
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça push para a sua branch: `git push origin minha-feature`.
+# Rode a aplicação
+$ flutter run
+```
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+# :bug: Issues
 
-## :memo: Licença
+Cria um issue <a href="https://github.com/Sthaynny/campo_minado/issues">nova issue</a>, será uma honra poder ajudá-lo a resolver e melhorar ainda mais nosso aplicativo.
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+# :sparkles: Contribuição
+
+- De um FORK nesse repositório;
+- Crie uma nova branch a partir da develop: `git checkout -b my-feature` ou `git flow feature start my-feature`;
+- Commit em sua banch: `git commit -m 'feat: my new feature'`;
+- Push em sua branch: `git push origin my-feature`.
+- Para mais informações acesse o [Guia de contribuição](https://github.com/Sthaynny/campo_minado/blob/main/.github/contributing.md)
+  
+Para ajudar a manter o padrão escolhido, também criamos um arquivo que é chamado antes de cada commit. Este arquivo irá formatar e identificar (se houver) erros no estilo de código do seu código. Para habilitar isso você deve primeiro copiá-lo para a pasta hooks do git. Se você estiver desenvolvendo no macOS, vá até a raiz do projeto e execute o comando abaixo:
+
+```
+cp pre-commit .git/hooks/pre-commit
+```
+
+Após esta etapa, é necessário dar permissão para que o arquivo seja executado. Basta seguir o seguinte comando:
+
+```
+chmod +x .git/hooks/pre-commit
+```
+
+
+# :page_facing_up: Licença
+
+Este projeto está sob a [MIT License](./LICENSE) |
+Made with 💖 by [Igor Sthaynny](https://www.linkedin.com/in/igor-sthaynny/).

@@ -1,14 +1,13 @@
 import 'package:campo_minado/core/exceptions/explosao_exceptin.dart';
 import 'package:campo_minado/features/campo_minado/domain/entities/campo.dart';
-import 'package:meta/meta.dart';
 
 class CampoModel extends Campo {
   CampoModel({
-    @required int linha,
-    @required int coluna,
+    required int linha,
+    required int coluna,
   }) : super(coluna: coluna, linha: linha);
 
-  final List<CampoModel> vizinhos = [];
+  final List<Campo> vizinhos = [];
   bool _aberto = false;
   bool _marcado = false;
   bool _minado = false;
@@ -38,8 +37,12 @@ class CampoModel extends Campo {
     }
 
     if (vizinhacaSegura) {
-      vizinhos.forEach((v) => v.abrir());
+      vizinhos.forEach(abrirCampo);
     }
+  }
+
+  void abrirCampo(Campo value) {
+    (value as CampoModel).abrir();
   }
 
   void revelarBomba() {
@@ -86,10 +89,10 @@ class CampoModel extends Campo {
   }
 
   bool get vizinhacaSegura {
-    return vizinhos.every((v) => !v._minado);
+    return vizinhos.every((v) => !(v as CampoModel)._minado);
   }
 
   int get qtdeMinasNaVizinhaca {
-    return vizinhos.where((v) => v.minado).length;
+    return vizinhos.where((v) => (v as CampoModel).minado).length;
   }
 }
