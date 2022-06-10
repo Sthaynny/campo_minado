@@ -102,4 +102,4 @@ chmod +x .git/hooks/pre-commit
 # :page_facing_up: Licença
 
 Este projeto está sob a [MIT License](./LICENSE) |
-Made with 💖 by [Igor Sthaynny](https://www.linkedin.com/in/igor-sthaynny/).
+Made with 💖 by [Igor Sthaynny](https://www.linkedin.com/in/igor-sthaynny/). 
