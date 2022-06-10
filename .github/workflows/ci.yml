@@ -9,7 +9,7 @@ on:
   push:
     branches: [all]
   pull_request:
-    types: [opened]
+    types: [opened, edited]
  
 jobs:
   build:
@@ -21,7 +21,6 @@ jobs:
         with:
           flutter-version: '3.0.0'
           channel: 'stable'
-          fetch-depth: 0
 
       - name: Install dependencies
         run: flutter pub get
@@ -35,5 +34,3 @@ jobs:
       - name: Run tests
         run: flutter test
         
-      - name: Commit lint messege
-        uses: wagoid/commitlint-github-action@v4
