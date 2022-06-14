@@ -15,7 +15,7 @@ class ResultadoWidgets extends StatelessWidget implements PreferredSizeWidget {
     } else if (venceu!) {
       return Colors.green[300];
     } else {
-      return Colors.red[300];
+      return Colors.red [300];
     }
   }
 
