@@ -38,8 +38,8 @@ class CampoMinadoCubit extends Cubit<CampoMinadoState> {
       campo.alterarMarcacao();
 
       if (state.tabuleiro != null && state.tabuleiro!.resolvido) {
-        emit(CampoMinadoFinishVictory(
-            venceu: false, tabuleiro: state.tabuleiro));
+        emit(
+            CampoMinadoFinishVictory(venceu: true, tabuleiro: state.tabuleiro));
       }
     }
   }
